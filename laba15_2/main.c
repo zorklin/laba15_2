@@ -3,7 +3,7 @@
 int main() {
 
 	//типізація даних, масив на 3 елементи і для циклу, так зміна для перевірки рівності чисел
-	int array[3], i, equal = 0;
+	int array[3], i, equal = 1;
 
 	//вивести дані про те що потрібно зробити користувачу
 	printf("Enter 3 number:\n");
@@ -23,7 +23,8 @@ int main() {
 
 		if (array[i] != array[i + 1]) {
 
-			equal += 1;
+			equal = 0;
+			break;
 
 		}
 
@@ -31,7 +32,7 @@ int main() {
 
 
 	//якщо всі 3 цифри рівні
-	if (!equal) {
+	if (equal) {
 
 		//вивсести цифри рівні
 		printf("Numbers are equal\n");
